@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+    border-radius: 0.5rem;
+    width: 30rem;
+    height: 22rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+}
+
+.card figure {
+    border-radius: 0.5rem 0 0 0.5rem;
+    height: 22rem;
+    width: 15rem;
+    background-image: url("../images/image-product-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.card-info {
+    justify-content: space-evenly;
+    flex: 0rem;
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 0.7rem;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.card-title {
+    font-family: Fraunces;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    
+}
+
+.card-description {
+    color: hsl(228, 12%, 48%);
+}
+
+.card-price {
+    font-family: Fraunces;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+}
+
+.card-oldprice {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.card-button {
+    font-size: 0.8rem;
+    color: #FFF;
+    width: 100%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: hsl(158, 36%, 37%);
+}
+
+.card-button:hover {
+    background-color: hsl(157, 59%, 21%);
+}
+
+.card-button::before {
+    content: url("../images/icon-cart.svg");
+    transform: scale(.5);
+    padding-right: 0.4rem;
+}
+
+.price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.card-category {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+    .card figure {
+        background-image: url("../images/image-product-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 15rem;
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    
+    .card-info {
+        grid-area: 2 / 1 / 3 / 2;
+        height: 20rem;
+        padding-left: 1rem;
+    }
+    .card {
+        width: 19rem;
+        height: 35rem;
+    }
+}
